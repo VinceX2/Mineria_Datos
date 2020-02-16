@@ -3,13 +3,13 @@
 Knowing that the mean (Xn) -> E (X) find E (X) = 68.2% for numbers that are between -1 to 1
 
 * Initialize the sample size "n" and the counter "c"
-```scala
+```r
 n<- 10000000
 c<-0
 ```
 
 * We build the loop for with a normal distribution with the size of our sample
-```scala
+```r
 for(i in rnorm(n, mean = 0, sd=1 )){
 }
 ```
