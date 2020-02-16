@@ -1,5 +1,5 @@
 ##1. Initialize sample size
-n<-10000
+n<-10000000 
 ##2. Initialize counter
 c<-0
 
