@@ -49,12 +49,18 @@ DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
 DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
 #Matrix
 #
+FreeThrows <- rbind(KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT)
+#Remove vectors - we don't need them anymore
+rm(KobeBryant_FT, JoeJohnson_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, LeBronJames_FT, ChrisPaul_FT, DerrickRose_FT, DwayneWade_FT, KevinDurant_FT)
+#Rename the columns
+colnames(FreeThrows) <- Seasons
+#Rename the rows
+rownames(FreeThrows) <- Players
+
+#Check the matrix
+FreeThrows
 # <put your code here>
-Point <- rbind(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT )
-rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)
-colnames(Point) <- Seasons
-rownames(Point) <- Players
-Point
+
 #
 ########### second matrix ############
 #Free Throw Attempts
@@ -86,6 +92,8 @@ myplot <- function(z, who=1:10) {
 myplot(FreeThrows)
 myplot(FreeThrowAttempts)
 
+#Part 1 - Free Throw Attempts Per Game 
+#(You will need the Games matrix)
 #Games 
 KobeBryant_G <- c(80,77,82,82,73,82,58,78,6,35)
 JoeJohnson_G <- c(82,57,82,79,76,72,60,72,79,80)
@@ -103,6 +111,14 @@ rm(KobeBryant_G, JoeJohnson_G, CarmeloAnthony_G, DwightHoward_G, ChrisBosh_G, Le
 colnames(Games) <- Seasons
 rownames(Games) <- Players
 
+myplot(FreeThrowAttempts/Games)
+
+myplot(FieldGoals/FieldGoalAttempts)
+
+#Part 2 - Free Throw Accuracy
+myplot(FreeThrows/Games)
 
 
+#Part 3 - Player Style Patterns Excluding Free Throws
+myplot((FieldGoalAttempts-FreeThrows)/Games)
 
