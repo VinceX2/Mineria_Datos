@@ -12,36 +12,42 @@ quantile(a)
 
 ## 20 functions
 
-* Redondea los decimales hacia el numero siguiente
+* Round the decimals to the next number
+
 ```R
 ceiling(3.475) # 4
 ```
-* Redondea el numero al numero su numero menor
+* Round the number to the number your smallest number
+
 ```R
 floor(3.475) # 3
 ```
-* razi cuadrada 
+* square root
+ 
 ```R
 sqrt(9) # 3
 ```
-* substrae de una variable los indices indicados
+* subtract indicator indices from one variable
 ```R
 x <- "abcdef"
 substr(x, 2, 4) # bcd
 ```
-*  Distribucion binomial
+*  Binomial Distribution
+
 ```R
 dbinom(0:5, 10, .5)
 ```
-* Distribucion uniforma
+* Uniform distribution
+
 ```R
 dunif(10, min=0, max=1)
 ```
-* Crea variables uniformes aleatoriamente
+* Create random variables randomly
+
 ```R
 punif(10, min=0, max=1)
 ```
-* mediana
+* mean
 ```R
 mean(10,na.rm = FALSE)
 ```
@@ -49,7 +55,8 @@ mean(10,na.rm = FALSE)
 ```R
 diff(45, lag=1)
 ```
-* repite los nuemros del 1-3 2 veces
+* repeat the numbers 1-3 2 times
+
 ```R
 rep(1:3, 2)
 ```
