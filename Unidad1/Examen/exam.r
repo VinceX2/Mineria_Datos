@@ -5,27 +5,36 @@ Life_Expectancy_At_Birth_2013 <- c(75.3286585365854,60.0282682926829,51.86617073
 
 #(c) Kirill Eremenko, www.superdatascience.com
 
-stats <- read.csv(file.choose())
-stats
+csvData <- read.csv(file.choose())
+csvData
 
-mydf <- data.frame(Country= Country_Code, Life_Expectancy_1960= Life_Expectancy_At_Birth_1960,
+data1960 <- csvData$Year == 1960
+data1960 <- csvData[data1960,]
+data1960
+
+data2013 <- csvData$Year == 2013
+data2013 <- csvData[data2013,]
+data2013
+
+dataFrame <- data.frame(Country= Country_Code, Life_Expectancy_1960= Life_Expectancy_At_Birth_1960,
                    Life_Expectancy_2013= Life_Expectancy_At_Birth_2013)
-mydf
+dataFrame
 
-merged <- merge(stats, mydf, by.x = "Country.Code", by.y = "Country")
-merged
+merged1960 <- merge(data1960, dataFrame, by.x = "Country.Code", by.y = "Country")
+merged1960
 
-merged$Country <- NULL
+merged2013 <- merge(data2013, dataFrame, by.x = "Country.Code", by.y = "Country")
+merged2013
+
 str(merged)
 
-
 # Plot Año 1960
-qplot(data = merged, x = Fertility.Rate, y = Life_Expectancy_1960,
+qplot(data = merged1960, x = Fertility.Rate, y = Life_Expectancy_1960,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
       main = "Expectativa de vida de 1960")
 
 # Plot Año 2013 
-qplot(data = merged, x = Fertility.Rate, y = Life_Expectancy_2013,
+qplot(data = merged2013, x = Fertility.Rate, y = Life_Expectancy_2013,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
       main = "Expectativa de vida de 2013")
 
@@ -34,4 +43,5 @@ qplot(data = merged, x = Fertility.Rate, y = Life_Expectancy_2013,
 # tiene una tasa de mortalidad alta en 1960 y un rango de fertilidad baja comparado
 # con Africa que tiene una tasa de mortalidad baja y un rango de fertilidad muy alta
 # En el año 2013 europa en algunas regiones la tasa de mortalidad bajo y en 
-# otras se elevaron considerablemente, en el caso de africa sucedio exatamente lo mismo.
+# otras se elevo considerablemente, en el caso de africa la tasa de mortalidad se 
+# elevo un poco pero su rango de fertilidad se redujo.
