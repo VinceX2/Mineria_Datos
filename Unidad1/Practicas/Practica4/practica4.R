@@ -47,6 +47,26 @@ ChrisPaul_FT <- c(394,292,332,455,161,337,260,286,295,289)
 KevinDurant_FT <- c(209,209,391,452,756,594,431,679,703,146)
 DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
 DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
+
+Point <- rbind(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT )	
+rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)	rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)
+colnames(Point) <- Seasons	
+Point
+
+#Matrix
+#
+FreeThrows <- rbind(KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT)
+#Remove vectors - we don't need them anymore
+rm(KobeBryant_FT, JoeJohnson_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, LeBronJames_FT, ChrisPaul_FT, DerrickRose_FT, DwayneWade_FT, KevinDurant_FT)
+#Rename the columns
+colnames(FreeThrows) <- Seasons
+#Rename the rows
+rownames(FreeThrows) <- Players
+
+#Check the matrix
+FreeThrows
+# <put your code here>
+
 # Matrix freeThrows
 
 FreeThrows <- rbind(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT )
@@ -83,6 +103,8 @@ myplot <- function(z, who=1:10) {
   legend("bottomleft", inset=0.01, legend=Players[who], col=c(1:4,6), pch=15:18, horiz=F)
 }
 
+#Part 1 - Free Throw Attempts Per Game 
+#(You will need the Games matrix)
 #Games 
 KobeBryant_G <- c(80,77,82,82,73,82,58,78,6,35)
 JoeJohnson_G <- c(82,57,82,79,76,72,60,72,79,80)
@@ -121,21 +143,15 @@ Points
 myplot(FreeThrows)
 myplot(FreeThrowAttempts)
 
-#Part 1 - Free Throw Attempts Per Game 
-#(You will need the Games matrix)
+
+
+
 myplot(FreeThrowAttempts/Games)
-#Notice how Chris Paul gets few attempts per game
+
+myplot(FieldGoals/FieldGoalAttempts)
 
 #Part 2 - Free Throw Accuracy
-myplot(freeThrows/FreeThrowAttempts)
-#And yet Chris Paul's accuracy is one of the highest
-#Chances are his team would get more points if he had more FTA's
-#Also notice that Dwight Howard's FT Accuracy is extremely poor
-#compared to other players. If you recall, Dwight Howard's
-#Field Goal Accuracy was exceptional:
-myplot(FieldGoals/FieldGoalAttempts)
-#How could this be? Why is there such a drastic difference?
-#We will see just now...
+myplot(FreeThrows/Games)
 
 #Part 3 - Player Style Patterns Excluding Free Throws
 myplot((FieldGoals- FreeThrows)/ Points)
@@ -159,6 +175,5 @@ myplot((FieldGoals- FreeThrows)/ Points)
 #   or even in contact with it. Free throws, on the other hand require
 #   the player to stand 15ft (4.57m) away from the hoop. That's 
 #   probably why Dwight Howard's Free Throw Accuracy is poor.
-
 
 
