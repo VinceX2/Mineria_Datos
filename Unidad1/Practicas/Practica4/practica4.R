@@ -47,6 +47,7 @@ ChrisPaul_FT <- c(394,292,332,455,161,337,260,286,295,289)
 KevinDurant_FT <- c(209,209,391,452,756,594,431,679,703,146)
 DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
 DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
+<<<<<<< HEAD:Unidad1/Practicas/Practica4/Matrices_Data.R
 #Matrix
 #
 FreeThrows <- rbind(KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT)
@@ -60,6 +61,15 @@ rownames(FreeThrows) <- Players
 #Check the matrix
 FreeThrows
 # <put your code here>
+=======
+# Matrix freeThrows
+
+FreeThrows <- rbind(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT )
+rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)
+colnames(FreeThrows) <- Seasons
+rownames(FreeThrows) <- Players
+FreeThrows
+>>>>>>> ba0659e5a1a503e467fa6d8d543f2750c676c3ff:Unidad1/Practicas/Practica4/practica4.R
 
 #
 ########### second matrix ############
@@ -75,22 +85,19 @@ KevinDurant_FTA <- c(256,256,448,524,840,675,501,750,805,171)
 DerrickRose_FTA <- c(205,205,205,250,338,555,239,0,32,187)
 DwayneWade_FTA <- c(803,535,467,771,702,652,297,425,258,370)
 #Matrix
-#
-FreeThrowAttempts
-# <put your code here>
+
 FreeThrowAttempts <- rbind(KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA, ChrisPaul_FTA, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA)
 rm(KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA, ChrisPaul_FTA, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA)
 colnames(FreeThrowAttempts) <- Seasons
 rownames(FreeThrowAttempts) <- Players
 FreeThrowAttempts
+
 #
 ########### function ############
 myplot <- function(z, who=1:10) {
   matplot(t(z[who,,drop=F]), type="b", pch=15:18, col=c(1:4,6), main="Basketball Players Analysis")
   legend("bottomleft", inset=0.01, legend=Players[who], col=c(1:4,6), pch=15:18, horiz=F)
 }
-myplot(FreeThrows)
-myplot(FreeThrowAttempts)
 
 #Part 1 - Free Throw Attempts Per Game 
 #(You will need the Games matrix)
@@ -109,14 +116,76 @@ DwayneWade_G <- c(75,51,51,79,77,76,49,69,54,62)
 Games <- rbind(KobeBryant_G, JoeJohnson_G, LeBronJames_G, CarmeloAnthony_G, DwightHoward_G, ChrisBosh_G, ChrisPaul_G, KevinDurant_G, DerrickRose_G, DwayneWade_G)
 rm(KobeBryant_G, JoeJohnson_G, CarmeloAnthony_G, DwightHoward_G, ChrisBosh_G, LeBronJames_G, ChrisPaul_G, DerrickRose_G, DwayneWade_G, KevinDurant_G)
 colnames(Games) <- Seasons
-rownames(Games) <- Players
+rownames(Games) <- Playersx
+Games
+#Points
+KobeBryant_PTS <- c(2832,2430,2323,2201,1970,2078,1616,2133,83,782)
+JoeJohnson_PTS <- c(1653,1426,1779,1688,1619,1312,1129,1170,1245,1154)
+LeBronJames_PTS <- c(2478,2132,2250,2304,2258,2111,1683,2036,2089,1743)
+CarmeloAnthony_PTS <- c(2122,1881,1978,1504,1943,1970,1245,1920,2112,966)
+DwightHoward_PTS <- c(1292,1443,1695,1624,1503,1784,1113,1296,1297,646)
+ChrisBosh_PTS <- c(1572,1561,1496,1746,1678,1438,1025,1232,1281,928)
+ChrisPaul_PTS <- c(1258,1104,1684,1781,841,1268,1189,1186,1185,1564)
+KevinDurant_PTS <- c(903,903,1624,1871,2472,2161,1850,2280,2593,686)
+DerrickRose_PTS <- c(597,597,597,1361,1619,2026,852,0,159,904)
+DwayneWade_PTS <- c(2040,1397,1254,2386,2045,1941,1082,1463,1028,1331)
+#Matrix
+Points <- rbind(KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAnthony_PTS, DwightHoward_PTS, ChrisBosh_PTS, ChrisPaul_PTS, KevinDurant_PTS, DerrickRose_PTS, DwayneWade_PTS)
+rm(KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAnthony_PTS, DwightHoward_PTS, ChrisBosh_PTS, ChrisPaul_PTS, KevinDurant_PTS, DerrickRose_PTS, DwayneWade_PTS)
+colnames(Points) <- Seasons
+rownames(Points) <- Players
+Points
+#Visualize the new matrices
+myplot(FreeThrows)
+myplot(FreeThrowAttempts)
 
+#Part 1 - Free Throw Attempts Per Game 
+#(You will need the Games matrix)
+myplot(FreeThrowAttempts/Games)
+#Notice how Chris Paul gets few attempts per game
+
+#Part 2 - Free Throw Accuracy
+myplot(freeThrows/FreeThrowAttempts)
+#And yet Chris Paul's accuracy is one of the highest
+#Chances are his team would get more points if he had more FTA's
+#Also notice that Dwight Howard's FT Accuracy is extremely poor
+#compared to other players. If you recall, Dwight Howard's
+#Field Goal Accuracy was exceptional:
+myplot(FieldGoals/FieldGoalAttempts)
+#How could this be? Why is there such a drastic difference?
+#We will see just now...
+
+<<<<<<< HEAD:Unidad1/Practicas/Practica4/Matrices_Data.R
 myplot(FreeThrowAttempts/Games)
 
 myplot(FieldGoals/FieldGoalAttempts)
 
 #Part 2 - Free Throw Accuracy
 myplot(FreeThrows/Games)
+=======
+#Part 3 - Player Style Patterns Excluding Free Throws
+myplot((FieldGoals- FreeThrows)/ Points)
+#Because we have excluded free throws, this plot now shows us
+#the true representation of player style change. We can verify
+#that this is the case because all the marks without exception
+#on this plot are between 2 and 3. That is because Field Goals
+#can only be for either 2 points or 3 points.
+#Insights:
+#1. You can see how players' preference for 2 or 3 point shots
+#   changes throughout their career. We can see that almost all
+#   players in this dataset experiment with their style throughout
+#   their careers. Perhaps, the most drastic change in style has
+#   been experienced by Joe Johnson.
+#2. There is one exception. You can see that one player has not
+#   changed his style at all - almost always scoring only 2-pointers.
+#   Who is this mystert player? It's Dwight Howard! 
+#   Now that explains a lot. The reason that Dwight Howard's
+#   Field Goal accuracy is so good is because he almost always
+#   scores 2-pointers only. That means he can be close to the basket
+#   or even in contact with it. Free throws, on the other hand require
+#   the player to stand 15ft (4.57m) away from the hoop. That's 
+#   probably why Dwight Howard's Free Throw Accuracy is poor.
+>>>>>>> ba0659e5a1a503e467fa6d8d543f2750c676c3ff:Unidad1/Practicas/Practica4/practica4.R
 
 
 #Part 3 - Player Style Patterns Excluding Free Throws
