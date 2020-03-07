@@ -10,7 +10,7 @@ length(a)
 
 quantile(a)
 
-## 10 functions
+## 20 functions
 
 * Redondea los decimales hacia el numero siguiente
 ```R
