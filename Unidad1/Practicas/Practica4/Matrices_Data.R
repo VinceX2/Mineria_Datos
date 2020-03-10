@@ -47,6 +47,12 @@ ChrisPaul_FT <- c(394,292,332,455,161,337,260,286,295,289)
 KevinDurant_FT <- c(209,209,391,452,756,594,431,679,703,146)
 DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
 DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
+
+Point <- rbind(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT )	
+rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)	rm(KobeBryant_FT,JoeJohnson_FT,LeBronJames_FT,CarmeloAnthony_FT, DwightHoward_FT,ChrisBosh_FT,ChrisPaul_FT,KevinDurant_FT,DerrickRose_FT,DwayneWade_FT)
+colnames(Point) <- Seasons	
+Point
+
 #Matrix
 #
 FreeThrows <- rbind(KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT)
@@ -121,4 +127,25 @@ myplot(FreeThrows/Games)
 
 #Part 3 - Player Style Patterns Excluding Free Throws
 myplot((FieldGoalAttempts-FreeThrows)/Games)
+
+#Because we have excluded free throws, this plot now shows us
+#the true representation of player style change. We can verify
+#that this is the case because all the marks without exception
+#on this plot are between 2 and 3. That is because Field Goals
+#can only be for either 2 points or 3 points.
+#Insights:
+#1. You can see how players' preference for 2 or 3 point shots
+#   changes throughout their career. We can see that almost all
+#   players in this dataset experiment with their style throughout
+#   their careers. Perhaps, the most drastic change in style has
+#   been experienced by Joe Johnson.
+#2. There is one exception. You can see that one player has not
+#   changed his style at all - almost always scoring only 2-pointers.
+#   Who is this mystert player? It's Dwight Howard! 
+#   Now that explains a lot. The reason that Dwight Howard's
+#   Field Goal accuracy is so good is because he almost always
+#   scores 2-pointers only. That means he can be close to the basket
+#   or even in contact with it. Free throws, on the other hand require
+#   the player to stand 15ft (4.57m) away from the hoop. That's 
+#   probably why Dwight Howard's Free Throw Accuracy is poor.
 
