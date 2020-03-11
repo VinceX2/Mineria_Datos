@@ -18,4 +18,4 @@
 - [**Practice 5**](./Unidad1/Practicas/Practica5) - _Dataframes Filters_
 
 #### Quiz
-- [**Quiz 1**](./Unidad1/Examen) - _Life Expectancy_
+- [**Quiz 1**](./Unidad1/Examen) - _Analysis_
