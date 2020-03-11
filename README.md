@@ -16,3 +16,6 @@
 - [**Practice 3**](./Unidad1/Practicas/Practica3) - _Mounthly Revenue And Expenses_
 - [**Practice 4**](./Unidad1/Practicas/Practica4) - _Free Throws_
 - [**Practice 5**](./Unidad1/Practicas/Practica5) - _Dataframes Filters_
+
+#### Quiz
+- [**Quiz 1**](./Unidad1/Examen) - _Life Expectancy_
