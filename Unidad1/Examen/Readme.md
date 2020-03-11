@@ -52,4 +52,4 @@ qplot(data = merged2013, x = Fertility.Rate, y = Life_Expectancy_2013,
       color = Region, size=I(3), shape=I(19), alpha =I(.4), 
       main = "Expectativa de vida de 2013")
 ```
-> Comparacion entre el periodo 1960 y 2013 comparando los dos periodos se puede deducir que europa tiene una tasa de esperanza de vida alta en 1960 y un rango de fertilidad baja comparado con Africa que tiene una tasa de esperanza de vida baja y un rango de fertilidad muy alta En el año 2013 europa en algunas regiones la tasa de esperanza de vida baja bajo y en otras se elevo considerablemente, en el caso de africa la tasa de esperanza de vida baja se elevo un poco pero su rango de fertilidad se redujo.
+> Comparison between the period 1960 and 2013 comparing the two periods, it can be deduced that Europe has a high life expectancy rate in 1960 and a low fertility range compared to Africa, which has a low life expectancy rate and a very fertile range. high In 2013, Europe in some regions had a low life expectancy rate and in others it rose considerably, in the case of Africa, the low life expectancy rate rose a little but its fertility range decreased.
