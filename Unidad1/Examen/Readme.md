@@ -1,4 +1,4 @@
-# Quiz
+# Quiz 1
 
 #### We need first execute the code below to generate the data for the analysis
 
