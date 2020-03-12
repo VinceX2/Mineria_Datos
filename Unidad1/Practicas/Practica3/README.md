@@ -28,7 +28,7 @@ profit.margin <- round(profit.after.tax / revenue , digits=2) * 100
 profit.margin
 ```
 
-* Calculamos la ganancia media después de impuestos para los 12 meses utilizando la funcion **mean()**
+* Calculate the average profit after tax for the 12 months using the function **mean()**
 ```scala
 mean_pat <- mean (profit.after.tax)
 mean_pat
