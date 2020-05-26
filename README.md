@@ -29,3 +29,6 @@
 - [**Homework 4**](./Unidad2/Tareas/Tarea4) - _Function SplitRatio and lm()_
 - [**Homework 5**](./Unidad2/Tareas/Tarea5) - _glm()_
 - [**Homework 6**](./Unidad2/Tareas/Tarea6) - _ElemStatLearn Library_
+
+#### 
+- [**Practice 3**](./Unidad2/Practicas/Practica3) - _BackWardElimination_
