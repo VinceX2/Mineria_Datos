@@ -19,3 +19,13 @@
 
 #### Quiz
 - [**Quiz 1**](./Unidad1/Examen) - _Analysis_
+
+## Unit 2
+
+#### Homework
+- [**Homework 1**](./Unidad2/Tareas/Tarea1) - _Leyes Grammar of graphics_
+- [**Homework 2**](./Unidad2/Tareas/Tarea2) - _Function geom_jitter()_
+- [**Homework 3**](./Unidad2/Tareas/Tarea3) - _P-value_
+- [**Homework 4**](./Unidad2/Tareas/Tarea4) - _Function SplitRatio and lm()_
+- [**Homework 5**](./Unidad2/Tareas/Tarea5) - _glm()_
+- [**Homework 6**](./Unidad2/Tareas/Tarea6) - _ElemStatLearn Library_
