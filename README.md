@@ -17,7 +17,7 @@
 - [**Practice 4**](./Unidad1/Practicas/Practica4) - _Free Throws_
 - [**Practice 5**](./Unidad1/Practicas/Practica5) - _Dataframes Filters_
 
-#### Quiz
+#### Test
 - [**Quiz 1**](./Unidad1/Examen) - _Analysis_
 
 ## Unit 2
@@ -31,9 +31,11 @@
 - [**Homework 6**](./Unidad2/Tareas/Tarea6) - _ElemStatLearn Library_
 - [**Homework 7**](./Unidad2/Tareas/Tarea6) - _Real Time Human Pose Recognition Essay_
 
-#### 
+#### Practices
 - [**Practice 1**](./Unidad2/Practicas/) - _Simple Linear Regression_
 - [**Practice 2**](./Unidad2/Practicas/) - Multiple Linear Regression_
 - [**Practice 3**](./Unidad2/Practicas/Practica3) - _BackWardElimination_
 - [**Practice 4**](./Unidad2/Practicas/) - _Support Vector Machine_
 - [**Practice 5**](./Unidad2/Practicas/) - _Desicion Tree_
+
+#### Tests
