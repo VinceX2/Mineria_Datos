@@ -1,4 +1,4 @@
-# Leyes Grammar of graphics
+# Grammar Laws of Graphics 
 
 ## Theme
 
