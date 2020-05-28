@@ -23,12 +23,17 @@
 ## Unit 2
 
 #### Homework
-- [**Homework 1**](./Unidad2/Tareas/Tarea1) - _Leyes Grammar of graphics_
+- [**Homework 1**](./Unidad2/Tareas/Tarea1) - _Grammar Laws of Graphics _
 - [**Homework 2**](./Unidad2/Tareas/Tarea2) - _Function geom_jitter()_
 - [**Homework 3**](./Unidad2/Tareas/Tarea3) - _P-value_
 - [**Homework 4**](./Unidad2/Tareas/Tarea4) - _Function SplitRatio and lm()_
 - [**Homework 5**](./Unidad2/Tareas/Tarea5) - _glm()_
 - [**Homework 6**](./Unidad2/Tareas/Tarea6) - _ElemStatLearn Library_
+- [**Homework 7**](./Unidad2/Tareas/Tarea6) - _Real Time Human Pose Recognition Essay_
 
 #### 
+- [**Practice 1**](./Unidad2/Practicas/) - _Simple Linear Regression_
+- [**Practice 2**](./Unidad2/Practicas/) - Multiple Linear Regression_
 - [**Practice 3**](./Unidad2/Practicas/Practica3) - _BackWardElimination_
+- [**Practice 4**](./Unidad2/Practicas/) - _Support Vector Machine_
+- [**Practice 5**](./Unidad2/Practicas/) - _Desicion Tree_
