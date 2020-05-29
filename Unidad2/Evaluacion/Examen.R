@@ -1,5 +1,6 @@
 getwd()
-setwd("/home/eduardo/Escritorio/Tareas Mineria/Examen")
+#setwd("/home/eduardo/Escritorio/Tareas Mineria/Examen")
+setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad2/Evaluacion")
 getwd()
 
 
@@ -54,4 +55,4 @@ u + geom_jitter(shape=20) + geom_boxplot(size=0.3,alpha=0.5,color="Black",outlie
   plot.title = element_text(color="Black", size=14, face="bold", hjust = 0.5),
   axis.title.x = element_text(color="blue", size=14, face="bold"),
   axis.title.y = element_text(color="purple", size=14, face="bold")
-)  +  ggtitle("Domestic Gross % by Genre") 
+)  +  ggtitle("Domestic Gross % by Genre") + ylab("Gross%US") 
