@@ -35,7 +35,9 @@
 - [**Practice 1**](./Unidad2/Practicas/) - _Simple Linear Regression_
 - [**Practice 2**](./Unidad2/Practicas/) - Multiple Linear Regression_
 - [**Practice 3**](./Unidad2/Practicas/Practica3) - _BackWardElimination_
-- [**Practice 4**](./Unidad2/Practicas/) - _Support Vector Machine_
-- [**Practice 5**](./Unidad2/Practicas/) - _Desicion Tree_
+- [**Practice 4**](./Unidad2/Practicas/) - _Logistic Regression_
+- [**Practice 5**](./Unidad2/Practicas/) - _Support Vector Machine_
+- [**Practice 6**](./Unidad2/Practicas/) - _Desicion Tree_
 
 #### Tests
+- [**Test 2.1**](./Unidad2/Evaluacion/) - _Test 2.1_
