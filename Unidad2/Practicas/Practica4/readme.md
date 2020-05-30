@@ -38,7 +38,7 @@ y_pred = ifelse(prob_pred > 0.5, 1, 0)
 y_pred
 ```
 
-En este punto, casi hemos terminado con el algoritmo, pero primero tenemos que mostrar los datos de forma visual utilizando la biblioteca ggplot () para generar un gráfico.
+At this point, we're almost finished with the algorithm but first we need to show the data in a visual way using the library ggplot() to generate an graphic.
 
 ```r
 ggplot(test_set, aes(x=Income, y=Debt)) + geom_point() +
