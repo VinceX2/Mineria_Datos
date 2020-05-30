@@ -21,7 +21,7 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 ```
 
-Now we're able to implement the algotirhm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variabel called classifier.
+Now we're able to implement the algorithm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variable called classifier.
 
 ```r
 classifier = svm(formula = Debt ~ .,
@@ -37,7 +37,7 @@ y_pred = predict(classifier, newdata = test_set[-3])
 y_pred
 ```
 
-At this point, we're almost finish with the algorithm but first we need to show the data in a visual way using the ElemStatLibrary to generate an graphic.
+At this point, we're almost finished with the algorithm but first we need to show the data in a visual way using the ElemStatLibrary to generate an graphic.
 
 ```r
 library(ElemStatLearn)
