@@ -21,7 +21,7 @@ training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
 ```
 
-Now we're able to implement the algotirhm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variabel called classifier.
+Now we're able to implement the algorithm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variable called classifier.
 
 ```r
 classifier = glm(formula = Debt ~ .,
