@@ -20,7 +20,7 @@ dataset$Genre = factor(dataset$Genre,
                        labels = c(1,2,3))
 ```
 
-After of convertion the dataset we're almost ready to start the algorithm, next thing is split the data in 2 parts one for testing dataframe and the other for training dataframe.
+After of conversion the dataset we're almost ready to start the algorithm, next thing is split the data in 2 parts one for testing dataframe and the other for training dataframe.
 
 ```r
 split <- sample.split(dataset$Budgetmillion, SplitRatio = 0.8)
@@ -28,7 +28,7 @@ training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
 ```
 
-Now we're able to implement the algotirhm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variabel called regressor.
+Now we're able to implement the algorithm, to do that we need first defined the formula and the dataset that we'll use in the algorithm, all this stuff inside a variable called regressor.
 
 ```r
 regressor = lm(formula = Budgetmillion ~ AudienceRatings,
@@ -43,7 +43,7 @@ y_pred = predict(regressor, newdata = test_set)
 y_pred
 ```
 
-At this point, we're almost finish with the algorithm but first we need to show the data in a visual way using the library ggplot() to generate an graphic.
+At this point, we're almost finished with the algorithm but first we need to show the data in a visual way using the library ggplot() to generate an graphic.
 
 ```r
 ggplot() +
