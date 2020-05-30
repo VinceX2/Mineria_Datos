@@ -47,7 +47,7 @@ ggplot(test_set, aes(x=Income, y=Debt)) + geom_point() +
 
 ### Results
 
-![Logistic-Regression](results2.png)
+![Logistic-Regression](result2.png)
 
 We use the ElemStatLibrary to generate an graphic with other meaning.
 
@@ -71,4 +71,4 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 ### Results
 
-![Logistic-Regression](results1.png)
+![Logistic-Regression](result1.png)
