@@ -38,6 +38,6 @@ ggplot() +
              color = 'red') +
   geom_line(aes(x = training_set$price, y = predict(regressor, newdata = training_set)),
             color = 'blue') +
-  ggtitle('Price vs Horsepower(Training Set)') +
+  ggtitle('Price vs Horsepower(Testing Set)') +
   xlab('Price') +
   ylab('Horsepower')
