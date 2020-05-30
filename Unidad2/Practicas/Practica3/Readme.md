@@ -1,4 +1,4 @@
-# Homework analise the follow atomation backwardElimination function 
+# Homework analyse the follow automation backward Elimination function
 ```R
 # receives the training_set and SL significance level
 backwardElimination <- function(x, sl) {
