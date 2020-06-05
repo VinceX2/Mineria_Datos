@@ -8,14 +8,14 @@ movies <- read.csv("Project-Data.csv")
 # We indicate which columns are the ones we use from our dataset
 movies <- movies [c(3,6,8,18)]
 # Since the review manager is only interested in certain genres of movies we filter our dataset
-movies<-movies[movies$Genre=="action"|movies$Genre=="adventure"|movies$Genre=="animation"|movies$Genre=="comedy"|movies$Genre=="drama",]
+movies<-movies[movies$Genre=="action"|movies$Genre=="adventure"|movies$Genre=="animation"|movies$Genre=="comedy"
+               |movies$Genre=="drama",]
 
 # It tells us that the studios you are interested in are the following, Buena Vista Studios, Fox, Paramount Picture, Sony, Universal and WB
 movies<-movies[movies$Studio=="Buena Vista Studios" | movies$Studio=="Fox" | movies$Studio=="Paramount Pictures" 
                |movies$Studio=="Sony" |movies$Studio=="Universal" |movies$Studio=="WB",]
 
-# we look at the first data of our dataset
-head(movies)
+
 # Rename the columns
 colnames(movies) <- c("Genre", "Studio", "BudgetMillions", "GrossUS")
 # We look at the first 6 records
