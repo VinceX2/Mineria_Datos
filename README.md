@@ -44,5 +44,5 @@
 
 #### Tests
 
-- [**Test 2.1**](./Unidad2/Evaluacion/Tests2.1) - _Test 2.1_
+- [**Test 2.1**](./Unidad2/Evaluacion/Test2.1) - _Test 2.1_
 - [**Test 2.2**](./Unidad2/Evaluacion/Test2.2) - _Test 2.2_
