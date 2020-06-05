@@ -1,4 +1,3 @@
-# Support Vector Machine (SVM)
 # Set our workspace
 getwd()
 setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad2/Evaluacion/Test2.2")
@@ -8,11 +7,17 @@ getwd()
 dataset = read.csv('Social_Network_Ads.csv')
 dataset = dataset[3:5]
 
+summary(dataset)
+head(dataset)
+
 # Encoding the target feature as factor
 dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
 
+dataset
+summary(dataset)
+head(dataset)
+
 # Splitting the dataset into the Training set and Test set
-# install.packages('caTools')
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.75)
@@ -23,25 +28,27 @@ test_set = subset(dataset, split == FALSE)
 training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 
-# Fitting SVM to the Training set
-# install.packages('e1071')
-library(e1071)
-classifier = naiveBayes(formula = Purchased ~ .,
-                 data = training_set,
-                 type = 'C-classification',
-                 kernel = 'linear')
+head(training_set)
 
+# Fitting naive bayes to the Training set
+library(e1071)
 classifier = naiveBayes(formula = Purchased ~ .,
                         data = training_set,
                         type = 'raw',
-                        laplace=3)
+                        laplace= 3)
+classifier
 
 # Predicting the Test set results
 y_pred = predict(classifier, newdata = test_set[-3])
 y_pred
+
 # Making the Confusion Matrix
 cm = table(test_set[, 3], y_pred)
 cm
+# Showing performance data of the prediction
+library(caret)
+confusionMatrix(cm)
+
 # Visualising the Training set results
 library(ElemStatLearn)
 set = training_set
