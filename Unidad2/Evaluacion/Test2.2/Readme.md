@@ -21,7 +21,7 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 ```
 
-Feature scaling
+We need to scale the features because the algorithm doesn't do it for us
 
 ```R
 training_set[-3] = scale(training_set[-3])
@@ -51,7 +51,8 @@ cm = table(test_set[, 3], y_pred)
 confusionMatrix(cm)
 ```
 
-Then, we're ready to visualize the predictions using the ElemStatLearn library. Using the test set results.
+Then, we're ready to visualize the predictions using the ElemStatLearn library. 
+Using the test set results.
 
 ```R
 library(ElemStatLearn)
@@ -75,4 +76,4 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 ## Analysis
 
-Based on the results using the naive bayes algorithms and plotting the data, we can conclude that categorical data used in this algoreithms show the preediccions if some people purchased something usisng using the independetn variable as purchased, also we got others columns such as age and estimated salary. Looking the plot we seeing that the green background are the who purchased the ads and the red one whose not purchased the ads.
+Based on the results using the naive bayes algorithm and plotting the data, we can end that categorical data used in this algorithm show the predictions if some people purchased something also we have  others columns such as age and estimated salary. Looking the graph we seeing that the green background there're the ones whose purchased the ads and the red ones whose not purchased the ads. In other words, we could say that who has more salary and more age could but something because he could but someones who has a young age and low salary maybe couldn't afford the ads but if we think in some other reason or we tried to get other meaning about this data we could say that maybe the older people are more careful about their money and they don't trust anything on the internet so for that they won't buy that ads, by other hand the young people maybe are more relaxed or careless when they're using the internet so they could buy something more easy than the older people.
