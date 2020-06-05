@@ -1,30 +1,30 @@
-# Set our workspace
+# We set up our workspace
 getwd()
 setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad2/Evaluacion/Test2.2")
 getwd()
 
-# Importing the dataset
+# We need to import the dataset
 dataset = read.csv('Social_Network_Ads.csv')
 dataset = dataset[3:5]
 
 summary(dataset)
 head(dataset)
 
-# Encoding the target feature as factor
+# We need to transform the value of Purchased column into a boolean value to manipulate the column.
 dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
 
 dataset
 summary(dataset)
 head(dataset)
 
-# Splitting the dataset into the Training set and Test set
+# We're ready to split our dataset into 2 samples, one for training and the other for testing using the purchased column.
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.75)
 training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
-# Feature Scaling
+# We need to scale the features because the algorithm doesn't do it for us
 training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 
