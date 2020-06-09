@@ -1,7 +1,8 @@
 # K-Means Clustering
 # Set our workspace
 getwd()
-setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad3/Evaluacion")
+#setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad3/Evaluacion")
+setwd("/home/eduardo/Escritorio/semestre_9/Mineria_Datos/Unidad3/Evaluacion")
 getwd()
 
 # Importing the dataset
@@ -30,20 +31,32 @@ kmeans = kmeans(x = dataset, centers = 3)
 y_kmeans = kmeans$cluster
 y_kmeans
 
-table(kmeans$cluster,dataset.class)
+table(dataset.class,kmeans$cluster,dnn=c("Species","Cluster number"))
 # Visualising the clusters
 # install.packages('cluster')
 library(cluster)
 clusplot(dataset,
          y_kmeans,
-         lines = 1,
+         lines = 0,
          shade = FALSE,
          color = TRUE,
          labels = 4,
          plotchar = TRUE,
          span = TRUE,
-         main = paste('Clusters of customers'),
-         xlab = 'Specie',
+         main = paste('Clusters of iris'),
          )
 
-    
+# relationship between features
+# red: setosa
+# green: versicolor
+# blue: virginia
+upper.panel<-function(x, y){
+        points(x,y, pch=19, col=c("red", "green3", "blue")[dataset.class])
+        r <- round(cor(x, y), digits=2)
+        txt <- paste0("R = ", r)
+        usr <- par("usr"); on.exit(par(usr))
+        par(usr = c(0, 1, 0, 1))
+        text(0.5, 0.9, txt)
+}
+pairs(dataset, lower.panel = NULL, 
+      upper.panel = upper.panel)
