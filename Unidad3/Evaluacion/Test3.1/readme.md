@@ -7,7 +7,7 @@ dataset = read.csv('iris.csv')
 head(dataset)
 ```
 
-Next thing, it's define the class name fo the predections of clusters also select only the first 4 columns in our dataset into a new dataset.
+Next thing, it's define the class name for the predections of clusters also select only the first 4 columns in our dataset into a new dataset.
 
 ```R
 dataset.class<- dataset[,"species"]
