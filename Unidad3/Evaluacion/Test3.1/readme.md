@@ -72,6 +72,8 @@ clusplot(dataset,
 
 ![plotClusters](plotClusters.png)
 
+
+This function we define the colors of the clusters for each class of the dataset, thanks to this function we can tell you when we graph that we only want the clusters to graph on the upper diagonal, to others we add in a point diagram the relationship that exists between the cluster
 ```R
 upper.panel<-function(x, y){
         points(x,y, pch=19, col=c("red", "green3", "blue")[dataset.class])
@@ -82,6 +84,7 @@ upper.panel<-function(x, y){
         text(0.5, 0.9, txt)
 }
 ```
+Finally we relate the graph adding our dataset, we define that in the lower diagonal it does not open graphs and in the upper diagonal where the graphs will be and what was previously explained
 
 ```R
 pairs(dataset, lower.panel = NULL,
@@ -93,3 +96,7 @@ pairs(dataset, lower.panel = NULL,
 ![pairs](pairs.png)
 
 ## Analysis
+
+Through the graphs we can clearly see how the three varieties of species studied of the iris plant are grouped. This helps us to see that despite being three different species of the same plant they have differences between them and some data is very similar that some data from some clusters come to share characteristics with another.
+
+We can corroborate this by peeing the last cluster graph in which we can see the correlation that exists in the characteristics of the different clusters (species).
