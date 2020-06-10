@@ -1,8 +1,8 @@
 # K-Means Clustering
 # Set our workspace
 getwd()
-#setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad3/Evaluacion")
-setwd("/home/eduardo/Escritorio/semestre_9/Mineria_Datos/Unidad3/Evaluacion")
+setwd("/Users/VinceLAB/Documents/ITT /Ene - Jun 2020/Mineria/RepoGitHub/MineriaRepo/Unidad3/Evaluacion")
+#setwd("/home/eduardo/Escritorio/semestre_9/Mineria_Datos/Unidad3/Evaluacion")
 getwd()
 
 # Importing the dataset
@@ -31,9 +31,10 @@ kmeans = kmeans(x = dataset, centers = 3)
 y_kmeans = kmeans$cluster
 y_kmeans
 
+# Table of clusters that the algorithm K-means found
 table(dataset.class,kmeans$cluster,dnn=c("Species","Cluster number"))
+
 # Visualising the clusters
-# install.packages('cluster')
 library(cluster)
 clusplot(dataset,
          y_kmeans,
